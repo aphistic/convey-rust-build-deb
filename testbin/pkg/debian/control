@@ -1,0 +1,7 @@
+Source: testbin
+Maintainer: Erik Davidson <erik@erikd.org>
+
+Package: testbin
+Architecture: amd64
+Description: A binary for testing builds.
+

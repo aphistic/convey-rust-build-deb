@@ -1,7 +1,8 @@
 Source: testbin
 Maintainer: Erik Davidson <erik@erikd.org>
+Build-Depends: debhelper (>=9), cargo
 
 Package: testbin
-Architecture: amd64
+Architecture: any
 Description: A binary for testing builds.
 

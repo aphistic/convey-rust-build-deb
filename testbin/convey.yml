@@ -1,0 +1,31 @@
+tasks:
+
+  import:
+    type: import
+    files:
+      - .
+
+  export:
+    type: export
+    files:
+      - debs/*
+
+  build-debs:
+    image: aphistic/convey-rust-build-deb:latest
+    environment:
+      - DEBIAN_PATH=pkg/debian
+      - DEB_OUTPUT=debs
+
+plans:
+
+  default:
+    stages:
+      - name: import
+        tasks:
+          - import
+      - name: build-debs
+        tasks:
+          - build-debs
+      - name: export
+        tasks:
+          - export
